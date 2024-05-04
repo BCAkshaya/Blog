@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The desire to be unhappy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #4f1101;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+        .painting-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .painting {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 6px;
+        }
+        .painting-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .painting-title {
+            font-size: 36px; /* Increased font size */
+            margin-bottom: 20px;
+        }
+        .painting-subtext {
+            font-size: 23px; /* Increased font size */
+            line-height: 1.6;
+            margin-bottom: 15px; /* Add margin between paragraphs */
+        }
+        .toggle-menu {
+            background-color: #182d01;
+            color: #7a7b7a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .toggle-menu::after {
+            content: 'Toggle Menu';
+        }
+        .toggle-blog-list {
+            background-color: #182d01;
+            color: #7a7b7a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            position: absolute;
+            top: 60px; /* Adjust top position */
+            right: 20px; /* Align with the toggle menu button */
+            z-index: 2; /* Ensure it's above the toggle menu */
+        }
+        .toggle-blog-list::after {
+            content: 'Toggle Blog List';
+        }
+        .blog-section {
+            background-color: #123001;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            position: absolute;
+            top: 20px;
+            right: -320px; /* Initially hide the blog list */
+            bottom: 20px;
+            overflow-y: auto;
+            transition: right 0.3s ease; /* Add smooth transition effect */
+            z-index: 3; /* Ensure blog list is on top */
+        }
+        .blog-section.active {
+            right: 20px; /* Show the blog list when active */
+        }
+        .blog-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #878787;
+        }
+        .blog-item {
+            margin-bottom: 10px;
+        }
+        .blog-item a {
+            color: #878787;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="painting-container">
+            <div class="border-container">
+                <div class="filler-border"></div>
+                <div class="gold-border-middle"></div>
+                <div class="gold-border-inner"></div>
+            </div>
+            <img src="renaissance.jpg" alt="Renaissance Painting" class="painting">
+        </div>
+        <div class="painting-info">
+            <div class="painting-title">The desire to be unhappy</div>
+            <div class="painting-subtext">
+                From every corner of humanity, it seems that sadness is not just something to be overcome, but also something that is desired.
+            </div>
+            <div class="painting-subtext">
+                The extensive trope of misery in literature and art conditions us to believe that if we havent endured enough suffering, then we havent lived a life worthy of inspiration.
+            </div>
+            <div class="painting-subtext">
+                Almost every protagonist in every story seems to have a tragic past. It doesnt have to be so, but it is. And every one wants to be a protagonist.
+            </div>
+            
+        </div>
+    </div>
+    <button class="toggle-menu" onclick="toggleBlogSection()">Toggle Menu</button>
+    <button class="toggle-blog-list" onclick="toggleBlogList()">Toggle Blog List</button>
+    <div class="blog-section" id="blogSection">
+        <h2>Related Blogs</h2>
+        <div class="blog-item">
+            <a href="#">Blog Title 1</a>
+        </div>
+        <div class="blog-item">
+            <a href="#">Blog Title 2</a>
+        </div>
+        <div class="blog-item">
+            <a href="#">Blog Title 3</a>
+        </div>
+        <div class="blog-item">
+            <a href="#">Blog Title 4</a>
+        </div>
+        <!-- Add more blog items as needed -->
+    </div>
+
+    <script>
+        function toggleBlogSection() {
+            var blogSection = document.getElementById('blogSection');
+            blogSection.classList.toggle('active');
+            var toggleMenuButton = document.querySelector('.toggle-menu');
+            var closeMenuButton = document.querySelector('.close-toggle-menu');
+            if (blogSection.classList.contains('active')) {
+                toggleMenuButton.style.display = 'none';
+                closeMenuButton.style.display = 'block';
+            } else {
+                toggleMenuButton.style.display = 'block';
+                closeMenuButton.style.display = 'none';
+            }
+        }
+
+        function toggleBlogList() {
+            var blogSection = document.getElementById('blogSection');
+            blogSection.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
