@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.title-bar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-bar h1 {
+    margin: 0;
+}
+.button {
+    padding: 8px 12px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #777;
+}
+
+/* Neomorphic Button */
+.neomorphic-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #c4c4c4,
+                -5px -5px 15px #ffffff;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .neomorphic-btn:hover {
+    box-shadow: 2px 2px 10px #c4c4c4,
+                -2px -2px 10px #ffffff;
+  }
+  
+  .neomorphic-btn:active {
+    box-shadow: inset 2px 2px 5px #c4c4c4,
+                inset -2px -2px 5px #ffffff;
+  }
+
+  /* Dark Neomorphic Button */
+/* Dark Neomorphic Button with Gradient */
+.neomorphic-dark-gradient-btn {
+        border-radius: 65px;
+        background: linear-gradient(145deg, #55535a, #65626b);
+        box-shadow: 27px 27px 51px #504e55, -27px -27px 51px #6c6a73;
+        padding: 15px 30px;
+        color: white;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+  }
+  
+  .neomorphic-dark-gradient-btn:hover {
+    box-shadow: 2px 2px 10px #2a2a2a,
+                -2px -2px 10px #3b3b3b;
+  }
+  
+  .neomorphic-dark-gradient-btn:active {
+    box-shadow: inset 2px 2px 5px #2a2a2a,
+                inset -2px -2px 5px #3b3b3b;
+  }
+  
+  body {
+    background-color: #5e5c64; /* Set page color */
+  }
